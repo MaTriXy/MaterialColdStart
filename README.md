@@ -49,9 +49,9 @@ The solution, a "new" format called `shsvg` (Shell SVG), is implemented as in [D
 
 > Note: To generate your own image assets, you will probably need a Linux installation. I may upload some pre-built assets later.
 
-1. Modified the `.conf` files to reflect the layout of your main activity. You can set some of the values to `0` so that the corresponding area will be hidden.
+1. (Optional) Adjust the appbar height (and more if you want). The default configuration assumes that your app have a `TabLayout`. If however your app does not, you need to modify each `window_background_statusbar_toolbar_tab.9.shsvg.conf` file in the given raw directories and change the `APPBAR_HEIGHT` from `112` to `64` and `104` to `56`.
 
-2. Run `gen-png.sh` and copy the output in `gen/` to your `res` directory. (requires `bash`, `inkscape` and `gcalccmd`(from `gnome-calculator`))
+2. Run `gen-png.sh` and copy the output in `gen/` to your `res` directory. (requires `bash`, `inkscape` and `gcalccmd` (from `gnome-calculator`))
 
 3. Make a new theme for your main activity:
 
@@ -66,7 +66,7 @@ The solution, a "new" format called `shsvg` (Shell SVG), is implemented as in [D
     ```xml
     <activity
         android:name=".MainActivity"
-        android:theme="@style/AppTheme.ColdStart">
+        android:theme="@style/AppTheme.MaterialColdStart">
 
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
