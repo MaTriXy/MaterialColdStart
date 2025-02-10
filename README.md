@@ -43,7 +43,7 @@ However, nine-patches need to be bitmaps, but we have various dimension sizes ch
 
 I don't want to keep a separate file for each combination of configuration (which can be 20 if you support tablet), but instead use a single template for nine-patch generation. After a lot of (painful) trial-and-error with `XSLT` and `sed`, I suddenly found the good old `bash` (which is string-oriented) a viable solution for this problem.
 
-The solution, a "new" format called `shsvg` (Shell SVG), is implemented as in [DreaminginCodeZH/AndroidSVGScripts](https://github.com/DreaminginCodeZH/AndroidSVGScripts) and used by this project.
+The solution, a "new" format called `shsvg` (Shell SVG), is implemented as in [zhanghai/AndroidSVGScripts](https://github.com/zhanghai/AndroidSVGScripts) and used by this project.
 
 ## Usage
 
@@ -51,7 +51,7 @@ The solution, a "new" format called `shsvg` (Shell SVG), is implemented as in [D
 
 1. (Optional) Adjust the appbar height (and more if you want). The default configuration assumes that your app have a `TabLayout`. If however your app does not, you need to modify each `window_background_statusbar_toolbar_tab.9.shsvg.conf` file in the given raw directories and change the `APPBAR_HEIGHT` from `112` to `64` and `104` to `56`.
 
-2. Run `gen-png.sh` and copy the output in `gen/` to your `res` directory. (requires `bash`, `inkscape` and `gcalccmd` (from `gnome-calculator`))
+2. Run `gen-png.sh` and copy the output in `gen/` to your `res` directory. (requires `bash`, `bc`, `gcalccmd` (from `gnome-calculator`) and `inkscape`)
 
 3. Make a new theme for your main activity:
 
